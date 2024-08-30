@@ -1,0 +1,174 @@
+.cabecalho-menu {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.container-img {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.container-botao:checked ~ .lista-menu {
+    display: block;
+}
+
+.container-botao:checked ~ .container-rotulo > .cabecalho-menu {
+    background-image: url(../images/Menu\ Aberto.svg);
+}
+
+.container-botao:checked ~ .container-rotulo {
+    background: var(--azul-degrade);
+}
+
+.menu-titulo, .menu-item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.menu-titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.menu-link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container-botao {
+    display: none;
+}
+
+.container-titulo {
+    display: none;
+}
+
+.container-texto {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho {
+        padding: 0 1em;
+    }
+
+    .cabecalho-menu {
+        display: none;
+    }
+
+    .container-titulo, .container-titulo-negrito {
+         font-family: var(--fonte-secundaria);
+         font-size: 30px;
+    }
+
+    .container-titulo {
+        font-weight: 400;
+        display: block;
+        margin: .5em;
+    }
+
+    .container-titulo-negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+    }
+
+    .opcoes-item:hover {
+        cursor: pointer;
+    }
+
+    .opcoes-botao {
+        display: none;
+    }
+
+    .opcoes-botao:checked ~ .lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opcoes-botao:checked ~ .opcoes-rotulo > .opcoes-item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+        cursor: pointer;
+    }
+
+    .opcoes-item {
+        padding: 2em 1em;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
+    .opcoes-link {
+        text-decoration: none;
+        color: var(--preto);
+    }    
+
+    .menu-item:hover {
+        background: var(--azul-degrade);
+        cursor: pointer;
+    }
+
+    .menu-item:hover > .menu-link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+
+    .container-imagem-transparente {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .container-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container-texto {
+        display: block;
+    }
+
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }
+} 
